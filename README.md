@@ -1,24 +1,28 @@
 # nbki-test-vue
 
-## Project setup
+## Тестовое задание для НБКИ --- Орлов Илья
+
+Демо-версия: https://iljorlov-nbki-test.netlify.app/
+
+## Подготовка проекта
 
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск в режиме разработки
 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Собрать проект
 
 ```
 yarn build
 ```
 
-### Run your unit tests
+### Запустить юнит-тесты
 
 ```
 yarn test:unit
