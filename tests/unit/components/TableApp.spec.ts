@@ -5,29 +5,17 @@ import {
   VueWrapper,
 } from "@vue/test-utils";
 import TableApp from "@/components/TableApp.vue";
-import { ActionTree, createStore, Store } from "vuex";
-import {
-  IRootState,
-  rootActions,
-  RootActionsEnum,
-  RootMutationsEnum,
-  rootState,
-} from "@/store";
+import { createStore, Store } from "vuex";
+import { IRootState, RootActionsEnum, rootState } from "@/store";
 import { sleep } from "@/helpers/sleep";
 import generateRandomTable from "@/helpers/generateRandomTable";
-import { TableEntryType } from "@/store/types";
 enableAutoUnmount(afterEach);
 
 describe("TableApp", () => {
-  let actions: ActionTree<IRootState, IRootState>;
   let store: Store<IRootState>;
   let wrapper: VueWrapper<any>;
 
   beforeEach(() => {
-    actions = {
-      [RootActionsEnum.POPULATE_TABLE_RANDOMLY]: jest.fn(),
-      actionInput: jest.fn(),
-    };
     store = createStore({
       actions: {
         [RootActionsEnum.POPULATE_TABLE_RANDOMLY]: jest.fn(

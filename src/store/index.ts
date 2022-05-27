@@ -46,7 +46,6 @@ export default createStore({
 });
 
 export const key: InjectionKey<Store<IRootState>> = Symbol();
-
 // "useStore" composition function
 export function useStore() {
   return baseUseStore(key);
